@@ -1,31 +1,31 @@
-.login {
+.auth-div {
   display: grid;
 }
 
-.login-banner {
+.auth-banner {
   max-width: 100%;
   height: calc(100vh - 90px);
   background: black;
 }
 
-.login-banner > img {
+.auth-banner > img {
   /* object-fit: cover; */
   height: 100%;
   width: 100%;
   opacity: 0.3;
 }
 
-.login-user {
+.auth-user {
   margin: auto;
   padding: 10rem;
   margin-bottom: 50px;
 }
 
-.login-user > h2 {
+.auth-user > h2 {
   font-size: 38px;
 }
 
-.login-user > p {
+.auth-user > p {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.6px;
@@ -33,7 +33,7 @@
   margin-bottom: 20px;
 }
 
-.login-btn {
+.auth-btn {
   width: 100%;
   border-radius: 4px;
   border: none;
@@ -67,21 +67,25 @@
   color: dodgerblue;
 }
 
+.register-div{
+  padding: 1rem 10rem;
+}
+
 /* Media Query */
 @media screen and (min-width: 600px) {
-  .login {
+  .auth-div {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
 
 @media screen and (max-width: 600px) {
-  .login {
+  .auth-div {
     grid-template-columns: repeat(auto-fit, minmax(160, 1fr));
   }
-  .login-banner {
+  .auth-banner {
     height: unset;
   }
-  .login-user {
+  .auth-user {
     padding: 3rem;
   }
 }

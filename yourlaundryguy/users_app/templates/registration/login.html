@@ -2,14 +2,14 @@
 <title>Login - Taskmate</title>
 {% endblock title %} {% block content %}
 
-<div class="login">
-  <div class="login-banner">
+<div class="auth-div">
+  <div class="auth-banner">
     <img
       src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80"
-      alt="login-banner"
+      alt="auth-banner"
     />
   </div>
-  <div class="login-user">
+  <div class="auth-user">
     <h2>Login for TaskMate</h2>
     <p>
       To keep connected with us please login with your registered email id and
@@ -17,7 +17,7 @@
     </p>
     <form method="POST">
       {% csrf_token %} {{ form|crispy }}
-      <button type="submit" class="login-btn">Login</button>
+      <button type="submit" class="auth-btn">Login</button>
       <span class="forgot-password">Forgot Password?</span>
     </form>
 
