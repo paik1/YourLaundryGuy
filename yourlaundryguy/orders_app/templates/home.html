@@ -1,84 +1,87 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-
-
-{% block content %}
-    <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" >
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-
-          <div class="item active">
-            <img src="{% static "images/home/home1.png" %}" alt="home1" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Los Angeles</h3>
-              <p>LA is always so much fun!</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="{% static "images/home/home2.png" %}" alt="home2" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
-            </div>
-          </div>
-        
-          <div class="item">
-            <img src="{% static "images/home/home1.png" %}" alt="home3" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>New York</h3>
-              <p>We love the Big Apple!</p>
-            </div>
-          </div>
+<main class="banner">
+  <div class="banner-content">
+    <h1>Hey there 👋🏽 I'm Your Laundry Guy</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo
+      asperiores inventore magnam nulla mollitia esse quidem adipisci possimus
+      corporis! Repudiandae neque dignissimos, voluptates error tempore
+      deleniti? Incidunt, molestias veritatis!
+    </p>
+    {% if user.is_authenticated == False %}
+    <div class="banner-auth">
+      <div class="banner-auth-btn register">
+        <a href="{% url 'register' %}"
+        >Register</a
+      >
+      </div>
       
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>  
-    
-  <div class="container-fluid">
-    <div class="row" style="background-color:#00bcd4;margin-top: 20px;">
-    <h3 align="center">Offered Services</h3>
-    <div class="container">
-      <div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" style="height: 300px;width: 250px;background-color: white; margin-top: 3px; margin-bottom: 3px; margin-right: 3px; margin-left: 30px;">
-        <p>Helo World</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" style="height: 300px;width: 250px;background-color: white; margin-top: 3px; margin-bottom: 3px; margin-right: 3px; margin-left: 30px;">
-        <p>Helo World</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" style="height: 300px;width: 250px;background-color: white; margin-top: 3px; margin-bottom: 3px; margin-right: 3px; margin-left: 30px;">
-        <p>Helo World</p>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3" style="height: 300px;width: 250px;background-color: white; margin-top: 3px; margin-bottom: 3px; margin-right: 3px; margin-left: 30px;">
-        <p>Helo World</p>
-      </div>
-      <br>
-      </div>
+      <div class="banner-auth-btn"><a href="{% url 'login' %}"
+        ></span>Login</a
+      ></div>
     </div>
+    {% endif %}
+  </div>
+  <div class="banner-carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{% static "images/home/home1.png" %}" alt="home1"
+          style="width:100%;">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>LA is always so much fun!</p>
+          </div>
+        </div>
+  
+        <div class="item">
+          <img src="{% static "images/home/home2.png" %}" alt="home2"
+          style="width:100%;">
+          <div class="carousel-caption">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago!</p>
+          </div>
+        </div>
+  
+        <div class="item">
+          <img src="{% static "images/home/home1.png" %}" alt="home3"
+          style="width:100%;">
+          <div class="carousel-caption">
+            <h3>New York</h3>
+            <p>We love the Big Apple!</p>
+          </div>
+        </div>
+      </div>
+  
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
-  
+  </div>
+</main>
 
 
-  
+<div class="service-div">
+  <h3 align="center">Offered Services</h3>
+  <div class="services">
+    <div class="service-card"></div>
+    <div class="service-card"></div>
+    <div class="service-card"></div>
+    <div class="service-card"></div>
+  </div>
+</div>
 
-  {% endblock %}
+
+{% endblock %}
