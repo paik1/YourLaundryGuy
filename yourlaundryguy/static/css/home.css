@@ -1,0 +1,153 @@
+.banner,
+.service-div {
+  width: 95vw;
+  background: white;
+  margin: auto;
+  border-radius: 8px;
+  display: grid;
+  overflow: hidden;
+}
+
+.banner-content {
+  padding: 30px;
+}
+
+.banner-content > p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #2d2d2d;
+  letter-spacing: 0.8px;
+  margin-top: 2rem;
+  padding: 6px;
+}
+
+.banner-carousel {
+  height: fit-content;
+  margin: auto;
+}
+
+.banner-img {
+  max-width: 100%;
+}
+
+.banner-auth {
+  display: flex;
+}
+
+.banner-auth-btn {
+  padding: 10px 20px;
+  background: dodgerblue;
+  font-size: 17px;
+  border-radius: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.banner-auth-btn > a {
+  color: white;
+}
+
+.banner-auth-btn > a:hover {
+  text-decoration: none;
+}
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.5)),
+    to(rgba(0, 0, 0, 0.0001))
+  );
+  background-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 20%) 0,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.0001) 0,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.0001) 0,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.0001)),
+    to(rgba(0, 0, 0, 0.5))
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.0001) 0,
+    rgb(0 0 0 / 32%) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.service-div {
+  margin: 20px auto 50px auto;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 1rem;
+  margin: 20px 26px;
+}
+
+.service-card {
+  background-color: #add8e652;
+  padding: 1rem;
+  height: 20rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .banner {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .banner-carousel {
+    -webkit-order: -1;
+    order: -1;
+  }
+}
+
+/* Animation */
+@keyframes scale-btn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
