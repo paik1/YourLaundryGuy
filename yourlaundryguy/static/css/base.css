@@ -25,6 +25,32 @@ body {
   transform: transform 2s ease-out;
 }
 
+.place-order-btn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  background: dodgerblue;
+  margin: 6px;
+  border-radius: 20px;
+}
+
+.place-order-btn > img {
+  height: 100%;
+  width: 20px;
+}
+
+.order-btn-txt {
+  padding: 0 !important;
+  margin-right: 12px;
+  color: #fbfbfb !important;
+  font-weight: 500;
+}
+
+.order-btn-txt:hover {
+  color: #dadada !important;
+}
+
 .footer {
   height: 4rem;
   display: flex;

@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.banner{ 
+  margin-top: 20px;
+}
+
 .banner-content {
   padding: 30px;
 }
