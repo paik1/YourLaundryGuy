@@ -6,6 +6,7 @@ body {
   border-radius: 0;
   background: white;
   border: none;
+  margin-bottom: 0 !important;
 }
 
 .navbar-brand {
