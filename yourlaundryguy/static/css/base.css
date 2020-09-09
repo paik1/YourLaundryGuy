@@ -42,6 +42,7 @@ body {
 .navbar-inverse .navbar-nav > .open > a:hover {
   background-color: #80808026 !important;
   color: black !important;
+  border-bottom: 3px solid dodgerblue;
 }
 
 .dropdown-menu {

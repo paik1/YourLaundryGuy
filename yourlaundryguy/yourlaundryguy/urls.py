@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from orders_app import views as home_view
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('home/', home_view.HomeView, name='home'),
@@ -23,5 +24,5 @@ urlpatterns = [
     path('accounts/', include('users_app.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('orders/', include('orders_app.urls')),
-
+    path('pricing/', TemplateView.as_view(template_name = 'pricing.html'), name="pricing"),
 ]
