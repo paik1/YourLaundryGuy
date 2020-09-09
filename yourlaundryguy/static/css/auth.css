@@ -9,10 +9,10 @@
 }
 
 .auth-banner > img {
-  /* object-fit: cover; */
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .auth-user {
@@ -61,7 +61,8 @@
   color: red;
 }
 
-.forgot-password, .new-register-span {
+.forgot-password,
+.new-register-span {
   float: right;
   margin-top: 10px;
   font-weight: 500;
