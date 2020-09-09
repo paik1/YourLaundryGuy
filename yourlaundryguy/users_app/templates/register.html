@@ -16,6 +16,9 @@
       {% csrf_token %} {{ register_form|crispy }}
 
       <button type="submit" class="auth-btn">Register</button>
+      <span class="new-register-span">Already have an account? 
+        <a href="{% url 'login' %}">Login in here</a>
+      </span>
     </form>
 
     {% if messages %} {% for message in messages %}

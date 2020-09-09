@@ -19,10 +19,55 @@ body {
   background: #333;
 }
 
-.navbar-nav > li > a:hover {
+.nav-option-btn{
+  user-select: none;
+}
+
+.nav-option-btn:hover {
   color: #2b2b2b !important;
   transform: scale(1.1) !important;
-  transform: transform 2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+
+.place-order-btn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  box-shadow: 0px 0px 11px #88888885;
+  margin: 6px;
+  border-radius: 20px;
+  transition: transform 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.place-order-btn > img {
+  height: 100%;
+  width: 20px;
+}
+
+.place-order-btn:hover {
+  transform: scale(1.05);
+}
+
+.place-order-btn > a {
+  color: dodgerblue !important;
+}
+
+.place-order-btn > a:hover {
+  color: dodgerblue !important;
+}
+
+.order-btn-txt {
+  padding: 0 !important;
+  margin-right: 12px;
+  color: #fbfbfb !important;
+  font-weight: 500;
+}
+
+.order-btn-txt:hover {
+  color: #dadada !important;
 }
 
 .footer {

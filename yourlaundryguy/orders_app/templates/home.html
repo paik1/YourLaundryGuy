@@ -23,7 +23,8 @@
     </div>
     {% endif %}
   </div>
-  <div class="banner-carousel">
+    <img style="height: 100%; width: 100%;" src="{% static 'images/chores-washing-clothes.svg' %}" alt="">
+  <!-- <div class="banner-carousel">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -68,19 +69,62 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  </div>
+  </div> -->
   </div>
 </main>
 
 
 <div class="service-div">
   <h3 align="center">Offered Services</h3>
-  <div class="services">
-    <div class="service-card"></div>
-    <div class="service-card"></div>
-    <div class="service-card"></div>
-    <div class="service-card"></div>
-  </div>
+  <section class="card-container">
+    <article class="card">
+      <figure class="card__thumbnail">
+          <img src="{% static 'images/ironing.svg' %}" alt="">
+      </figure>
+      <header class="card__title">
+          <h4>Service Name</h4>
+      </header>
+      <main class="card__description">
+          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun
+      </main>
+  </article>
+  <article class="card">
+      <figure class="card__thumbnail">
+        <img src="{% static 'images/basket.svg' %}" alt="">
+      </figure>
+      <header class="card__title">
+          <h4>Service Name</h4>
+      </header>
+      <main class="card__description">
+          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun 
+      </main>
+
+  </article>
+  <article class="card">
+      <figure class="card__thumbnail">
+          <img src="{% static 'images/detergent.svg' %}" alt="">
+      </figure>
+      <header class="card__title">
+          <h4>Service Name</h4>
+      </header>
+      <main class="card__description">
+          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun 
+      </main>
+
+  </article>
+  <article class="card">
+      <figure class="card__thumbnail">
+          <img src="{% static 'images/delivery.svg' %}" alt="">
+      </figure>
+      <header class="card__title">
+          <h4>Service Name</h4>
+      </header>
+      <main class="card__description">
+          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun 
+      </main>
+
+  </article>
+</section>
 </div>
 
 

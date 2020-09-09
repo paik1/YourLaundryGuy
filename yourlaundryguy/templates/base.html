@@ -39,14 +39,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url 'home' %}">YourLaundryGuy</a>
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <!-- <img
+              src="{% static 'images/logo.svg' %}"
+              width="30"
+              height="30"
+              class="d-inline-block align-top"
+              alt=""
+            /> -->
+            YourLaundryGuy</a
+          >
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Price</a></li>
+            <li><a class="nav-option-btn" href="#">Services</a></li>
+            <li><a class="nav-option-btn" href="#">Price</a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              <a
+                class="dropdown-toggle nav-option-btn"
+                data-toggle="dropdown"
+                href="#"
                 >About Us<span class="caret"></span
               ></a>
               <ul class="dropdown-menu">
@@ -64,6 +76,10 @@
               >
             </li>
             {% endif %}
+            <li class="place-order-btn">
+              <a class="order-btn-txt" href="#">Place Order</a>
+              <img src="{% static 'images/carts.svg' %}" alt="cart-icon" />
+            </li>
           </ul>
         </div>
       </div>

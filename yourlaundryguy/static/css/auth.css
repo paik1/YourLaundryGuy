@@ -47,6 +47,7 @@
 .control-group {
   margin-top: 20px;
 }
+
 .controls > input {
   width: 100%;
   padding: 6px;
@@ -55,11 +56,12 @@
   margin-left: 20p;
   padding-left: 12px;
 }
+
 .alert > ul > li {
   color: red;
 }
 
-.forgot-password {
+.forgot-password, .new-register-span {
   float: right;
   margin-top: 10px;
   font-weight: 500;
@@ -67,18 +69,27 @@
   color: dodgerblue;
 }
 
-.register-div{
+.new-register-span {
+  color: black;
+  float: left;
+}
+
+.register-div {
   padding: 1rem 10rem;
 }
 
+.login-div {
+  padding: 15rem;
+}
+
 /* Media Query */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .auth-div {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 33.334% 66.667%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .auth-div {
     grid-template-columns: repeat(auto-fit, minmax(160, 1fr));
   }
