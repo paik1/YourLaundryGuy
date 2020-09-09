@@ -13,13 +13,20 @@ body {
   color: #2b2b2b !important;
   letter-spacing: 0.6px !important;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand > img {
+  margin-right: 8px;
 }
 
 .navbar-toggle {
   background: #333;
 }
 
-.nav-option-btn{
+.nav-option-btn {
   user-select: none;
 }
 
@@ -27,6 +34,18 @@ body {
   color: #2b2b2b !important;
   transform: scale(1.1) !important;
   transition: transform 0.2s ease-out;
+}
+
+.nav-option-btn:focus,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover {
+  background-color: #80808026 !important;
+  color: black !important;
+}
+
+.dropdown-menu {
+  border-radius: 6px;
 }
 
 .place-order-btn {

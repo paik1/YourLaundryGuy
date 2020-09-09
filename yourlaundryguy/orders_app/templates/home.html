@@ -74,55 +74,72 @@
 </main>
 
 
-<div class="service-div">
+<div id="service" class="service-div">
   <h3 align="center">Offered Services</h3>
   <section class="card-container">
     <article class="card">
       <figure class="card__thumbnail">
+          <img src="{% static 'images/basket.svg' %}" alt="">
+      </figure>
+      <header class="card__title">
+          <h4>Wash and Fold 
+          </h4>
+      </header>
+      <main class="card__description">
+        We wash your clothes exclusively using
+        skin friendly detergent and fabric 
+        conditioner to ensure freshness.
+        Professionally folded to maintain minimal
+        creases.
+      </main>
+      <span class="service-rec"><b>Recommended for:</b> Casual, daily, sportswear
+        and undergarments.
+        </span>
+  </article>
+  <article class="card">
+      <figure class="card__thumbnail">
+        <img src="{% static 'images/steam-press.svg' %}" alt="">
+      </figure>
+      <header class="card__title">
+          <h4>Wash and Iron
+          </h4>
+      </header>
+      <main class="card__description">
+        We wash your clothes exclusively using
+        skin friendly detergent and fabric 
+        conditioner to ensure freshness.
+        To top it off, we make it crispy!
+      </main>
+      <span class="service-rec"><b>Recommended for:</b> Office and casual wear
+        </span>
+  </article>
+  <article class="card">
+      <figure class="card__thumbnail">
           <img src="{% static 'images/ironing.svg' %}" alt="">
       </figure>
       <header class="card__title">
-          <h4>Service Name</h4>
+          <h4>Ironing</h4>
       </header>
       <main class="card__description">
-          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun
+        You no longer have to worry about the wrinkles and burns.
+        Let me serve to make your clothes crease free and crisp.
       </main>
+      <span class="service-rec"><b>Recommended for:</b> Everything! other than your undergarments
+      </span>
   </article>
   <article class="card">
       <figure class="card__thumbnail">
-        <img src="{% static 'images/basket.svg' %}" alt="">
+          <img src="{% static 'images/dry-clean.svg' %}" alt="">
       </figure>
       <header class="card__title">
-          <h4>Service Name</h4>
+          <h4>Dry Clean
+          </h4>
       </header>
-      <main class="card__description">
-          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun 
+      <main class="card__description">Individually treated with upmost care and expertise
+        whilst using safe solvents and fabric softener.
       </main>
-
-  </article>
-  <article class="card">
-      <figure class="card__thumbnail">
-          <img src="{% static 'images/detergent.svg' %}" alt="">
-      </figure>
-      <header class="card__title">
-          <h4>Service Name</h4>
-      </header>
-      <main class="card__description">
-          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun 
-      </main>
-
-  </article>
-  <article class="card">
-      <figure class="card__thumbnail">
-          <img src="{% static 'images/delivery.svg' %}" alt="">
-      </figure>
-      <header class="card__title">
-          <h4>Service Name</h4>
-      </header>
-      <main class="card__description">
-          Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun Lorem Ipsum dolor amet sun 
-      </main>
-
+      <span class="service-rec"><b>Recommended for:</b> Hard-stained clothes. Delicate and Special wear garments.
+      </span>
   </article>
 </section>
 </div>
