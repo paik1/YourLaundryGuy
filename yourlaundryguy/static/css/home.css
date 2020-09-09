@@ -187,11 +187,9 @@
   color: white;
 }
 
-.card__thumbnail > div {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: lightgray;
+.card__thumbnail > img {
+  height: 100px;
+  width: 100px;
 }
 .card__title {
   font-size: 2rem;
