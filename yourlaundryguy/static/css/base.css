@@ -49,6 +49,25 @@ body {
   border-radius: 6px;
 }
 
+.navbar-right {
+  display: flex !important;
+}
+
+.nav-avatar {
+  margin: auto;
+}
+
+.nav-avatar > img {
+  width: 30px;
+  height: 30px;
+  margin-left: 16px;
+}
+
+.nav-avatar > img:hover{
+  transform: scale(1.1) !important;
+  transition: transform 0.2s ease-out;
+}
+
 .place-order-btn {
   display: flex !important;
   justify-content: center;

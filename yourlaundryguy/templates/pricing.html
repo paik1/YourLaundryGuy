@@ -1,7 +1,207 @@
-{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %} 
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
 {% block title %}
 <title>Login - Taskmate</title>
 {% endblock title %} {% block content %}
 
-<h2>This is pricing</h2>
+<div class="pricing-div">
+  <div class="pricing-header">
+    <h2>Simple, Transparent pricing</h2>
+    <p>No Contracts, No hidden charges</p>
+  </div>
+  <div class="pricing-card-div">
+    <div class="pricing-card">
+      <h3>Wash and Fold</h3>
+      <hr />
+      <div class="pricing-model-div">
+        <h4>Normal Delivery</h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>65/Kg</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>85/Kg</span>
+        </p>
+      </div>
+      <div class="pricing-model-div">
+        <h4>Express Delivery <span> Within 8Hr</span></h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>65/Kg</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>85/Kg</span>
+        </p>
+      </div>
+    </div>
+    <div class="pricing-card">
+      <h3>Wash and Iron</h3>
+      <hr />
+      <div class="pricing-model-div">
+        <h4>Normal Delivery</h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>119/Kg</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>149/Kg</span>
+        </p>
+      </div>
+      <div class="pricing-model-div">
+        <h4>Express Delivery <span> Within 8Hr</span></h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>169/Kg</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>199/Kg</span>
+        </p>
+      </div>
+    </div>
+    <div class="pricing-card">
+      <h3>Ironing</h3>
+      <hr />
+      <div class="pricing-model-div">
+        <h4>Normal Delivery</h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>8/Piece</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>12/Piece</span>
+        </p>
+      </div>
+      <div class="pricing-model-div">
+        <h4>Express Delivery <span> Within 8Hr</span></h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>15/Piece</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>23/Piece</span>
+        </p>
+      </div>
+    </div>
+    <div class="pricing-card">
+      <h3>Dry Cleaning</h3>
+      <hr />
+      <div class="pricing-model-div">
+        <h4>Normal Delivery</h4>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Normal
+          <span>00/Kg</span>
+        </p>
+        <p>
+          <img
+            width="14"
+            height="14"
+            src="{% static 'images/check.svg' %}"
+            alt="check"
+          />
+          Heavy
+          <span>00/Kg</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="price-Category">
+    <h4>
+      Normal Cloths:
+      <span>
+        Tshirt/Shirt, Pant, Leggings, Kurta, Nighty, Dhoti, Chudidar, All types
+        of inner garments, Hand Karchef, etc.
+      </span>
+    </h4>
+    <h4>
+      Heavy Cloths:
+      <span
+        >Curtain, Pullover, Sweater, Blazer, Bedsheet, Saree, Table cloths,
+        Quilt, etc
+      </span>
+    </h4>
+  </div>
+</div>
 {% endblock content %}
