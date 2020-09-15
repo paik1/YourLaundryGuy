@@ -1,39 +1,75 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-  <form method="POST">
-    {% csrf_token %}
+<div class="auth-div">
+  <div class="auth-banner">
+    <img src="{% static 'images/pattern.svg' %}" alt="auth-banner" />
+  </div>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="{{ request.user.username }}"><br><br>
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" value="{{ request.user.email }}"><br><br>
+  <div class="auth-user order-div">
+    <h2>Place your order</h2>
+    <form method="POST" class="order-form">
+      {% csrf_token %}
 
-    {{ form.as_p }}
+      <label for="name">Name:</label>
+      <input
+      disabled
+        type="text"
+        id="name"
+        name="name"
+        value="{{ request.user.username }}"
+      /><br /><br />
+      <label for="email">Email:</label>
+      <input
+      disabled
+        type="text"
+        id="email"
+        name="email"
+        value="{{ request.user.email }}"
+      /><br /><br />
+      {{ form.as_p }}
 
-    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Order Info</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Are you sure you would like to place the order?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Confirm</button>
-          </div>
+      <button
+        type="button"
+        data-toggle="modal"
+        class="auth-btn"
+        data-target="#exampleModalCenter"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <div
+    class="modal fade"
+    id="exampleModalCenter"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Order Info</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true" >&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you would like to place the order?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Confirm</button>
         </div>
       </div>
     </div>
-  </form>
-    
-  {% endblock %}
+  </div>
+</div>
 
-
+{% endblock %}
