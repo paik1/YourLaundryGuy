@@ -1,8 +1,8 @@
 from django.db import models
 from datetime import datetime, date
-#from django.contrib.auth.models import User
-#from django.core.validators import RegexValidator
-# Create your models here.
+import uuid
+from django.contrib.auth.models import User
+
 
 CATEGORIES = (
     ('waf','WASH AND FOLD'),
@@ -28,13 +28,35 @@ TIME_SLOTS = (
     ('8t9','8PM-9PM'),
 )
 
+ORDER_STATUS = (
+    ('P', 'Placed'),
+    ('C', 'Collected'),
+    ('D', 'Delivered'),
+    ('X', 'Cancelled'),
+)
+
+EXPRESS_DELIVERY = (
+    ('Y', 'YES'),
+    ('N', 'NO')
+)
+
 class OrderInfo(models.Model):
-    name  = models.CharField(max_length=20,)
-    email = models.EmailField(max_length=30,)
+    order_id = models.CharField(max_length=100, blank=True, unique=True, default=uuid.uuid4)
+    name = models.CharField(max_length=20, default=None)
+    manager  = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    email = models.EmailField(max_length=30)
     phone_number = models.CharField(max_length=10,)
     categories = models.CharField(max_length=21, choices=CATEGORIES, default='waf')
     time_slot = models.CharField(max_length=23, choices=TIME_SLOTS, default='plz')
     order_date = models.DateField(null = 'true')
+    express_d = models.CharField(max_length=10, choices=EXPRESS_DELIVERY, default='N', help_text='Express Delivery might charge you extra. Please check the Pricing tab for more details')
+    status = models.CharField(max_length=10, choices=ORDER_STATUS, default='P')
+    normal_cloths_quantity = models.CharField(max_length=10, null=True, default=None)
+    normal_cloths_kg = models.CharField(max_length=10, null=True, default=None)
+    heavy_cloths_quantity = models.CharField(max_length=10, null=True, default=None)
+    heavy_cloths_kg = models.CharField(max_length=10, null=True, default=None)
+    iron_quantity = models.CharField(max_length=10, null=True, default=None)
+    total_amount = models.CharField(max_length=10, null=True, default=None)
 
     def __str__(self):
         return self.name + " - " + str(self.order_date)
