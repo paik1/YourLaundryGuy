@@ -16,4 +16,4 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = OrderInfo
-        fields = ('name','email','phone_number','categories','time_slot','order_date')
+        fields = ('phone_number','categories','time_slot','order_date', 'express_d')
